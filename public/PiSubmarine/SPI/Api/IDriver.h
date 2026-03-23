@@ -8,6 +8,6 @@ namespace PiSubmarine::SPI::Api
     {
     public:
         virtual ~IDriver() = default;
-        virtual bool WriteRead(uint8_t* txData, uint8_t* rxData, size_t len) = 0;
+        virtual bool WriteRead(uint8_t* txData, uint8_t* rxData, std::size_t len) = 0;
     };
 }

@@ -1,5 +1,5 @@
 ﻿cmake_minimum_required (VERSION 3.25)
-project("PiSubmarine.Api.Internal.SPI")
+project("PiSubmarine.SPI.Api")
 
 set(_build_cmake_url "https://raw.githubusercontent.com/PiSubmarine/Build.CMake/main/PiSubmarine.Build.CMake.cmake")
 set(_build_cmake_local "${CMAKE_BINARY_DIR}/PiSubmarine.Build.CMake.cmake")

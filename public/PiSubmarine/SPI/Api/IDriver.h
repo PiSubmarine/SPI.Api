@@ -2,7 +2,7 @@
 
 #include <cstdint>
 
-namespace PiSubmarine::Api::Internal::SPI
+namespace PiSubmarine::SPI::Api
 {
     class IDriver
     {

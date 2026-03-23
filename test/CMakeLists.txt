@@ -2,10 +2,10 @@ cmake_minimum_required(VERSION 3.20)
 
 include(FetchContent)
 
-project(PiSubmarine.Api.Internal.SPI.Test LANGUAGES CXX)
+project(PiSubmarine.SPI.Api.Test LANGUAGES CXX)
 
-set(PiSubmarine.Api.Internal.SPI.Test.Sources
-        "PiSubmarine/Api/Internal/SPI/IDriverTest.cpp")
+set(PiSubmarine.SPI.Api.Test.Sources
+        "PiSubmarine/SPI/Api/IDriverTest.cpp")
 
 enable_testing()
 
@@ -13,11 +13,11 @@ enable_testing()
 find_package(spdlog)
 find_package(GTest)
 
-add_executable(PiSubmarine.Api.Internal.SPI.Test ${PiSubmarine.Api.Internal.SPI.Test.Sources})
-PiSubmarineInitTarget(PiSubmarine.Api.Internal.SPI.Test)
+add_executable(PiSubmarine.SPI.Api.Test ${PiSubmarine.SPI.Api.Test.Sources})
+PiSubmarineInitTarget(PiSubmarine.SPI.Api.Test)
 
-target_link_libraries(PiSubmarine.Api.Internal.SPI.Test PRIVATE PiSubmarine.Api.Internal.SPI)
-target_link_libraries(PiSubmarine.Api.Internal.SPI.Test PRIVATE spdlog::spdlog)
-target_link_libraries(PiSubmarine.Api.Internal.SPI.Test PRIVATE GTest::gtest_main)
+target_link_libraries(PiSubmarine.SPI.Api.Test PRIVATE PiSubmarine.SPI.Api)
+target_link_libraries(PiSubmarine.SPI.Api.Test PRIVATE spdlog::spdlog)
+target_link_libraries(PiSubmarine.SPI.Api.Test PRIVATE GTest::gtest_main)
 include(GoogleTest)
-gtest_discover_tests(PiSubmarine.Api.Internal.SPI.Test)
+gtest_discover_tests(PiSubmarine.SPI.Api.Test)

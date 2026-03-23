@@ -2,7 +2,7 @@
 
 #include <cstdint>
 
-namespace PiSubmarine::Api::Internal::SPI
+namespace PiSubmarine::SPI::Api
 {
 	template<typename T>
 	concept DriverConcept = requires(T driver, uint8_t* txData, uint8_t* rxData, size_t len)

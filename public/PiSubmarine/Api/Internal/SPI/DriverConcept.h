@@ -1,7 +1,6 @@
 #pragma once
 
 #include <cstdint>
-#include "PiSubmarine/Api/Internal/SPI/Callback.h"
 
 namespace PiSubmarine::Api::Internal::SPI
 {

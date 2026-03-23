@@ -1,5 +1,3 @@
-#pragma once
-
 #include <gtest/gtest.h>
 #include "PiSubmarine/SPI/Api/IDriver.h"
 #include "PiSubmarine/SPI/Api/DriverConcept.h"

@@ -1,6 +1,7 @@
 #pragma once
 
 #include <gmock/gmock.h>
+#include <span>
 #include "PiSubmarine/SPI/Api/IDriver.h"
 
 namespace PiSubmarine::SPI::Api
@@ -9,7 +10,7 @@ namespace PiSubmarine::SPI::Api
     {
     public:
         MOCK_METHOD(bool, WriteRead,
-                    (uint8_t* txData, uint8_t* rxData, std::size_t len),
+                    (std::span<const uint8_t> txData, std::span<uint8_t> rxData),
                     (override));
     };
 }

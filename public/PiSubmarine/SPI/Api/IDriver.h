@@ -1,6 +1,8 @@
 #pragma once
 
+#include <cstddef>
 #include <cstdint>
+#include <span>
 
 namespace PiSubmarine::SPI::Api
 {
@@ -8,6 +10,6 @@ namespace PiSubmarine::SPI::Api
     {
     public:
         virtual ~IDriver() = default;
-        virtual bool WriteRead(uint8_t* txData, uint8_t* rxData, std::size_t len) = 0;
+        virtual bool WriteRead(std::span<const uint8_t> txData, std::span<uint8_t> rxData) = 0;
     };
 }
